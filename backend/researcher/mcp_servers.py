@@ -79,6 +79,8 @@ def create_playwright_mcp_server(timeout_seconds=120):
         "--isolated",
         "--no-sandbox",
         "--ignore-https-errors",
+        "--block-service-workers",
+        "--no-webmcp",
         "--user-agent",
         PLAYWRIGHT_USER_AGENT,
     ]
@@ -132,10 +134,17 @@ def create_playwright_mcp_server(timeout_seconds=120):
         params["env"],
     )
 
+    #tool_filter = {"allowed_tool_names": ["browser_navigate", "browser_snapshot"]}
+
     if MCP_LOGGING_ENABLED:
         return LoggingMCPServerStdio(
             params=params,
             client_session_timeout_seconds=timeout_seconds,
+            #tool_filter=tool_filter,
         )
-
-    return MCPServerStdio(params=params, client_session_timeout_seconds=timeout_seconds)
+    
+    return MCPServerStdio(
+        params=params, 
+        client_session_timeout_seconds=timeout_seconds,
+        #tool_filter=tool_filter,
+    )

@@ -43,11 +43,11 @@ graph TB
     Planner -->|Finalize| DB
     DB -->|Results| User
     
-    style Planner fill:#FFD700
-    style Reporter fill:#90EE90
-    style Charter fill:#87CEEB
-    style Retirement fill:#DDA0DD
-    style Tagger fill:#FFB6C1
+    style Planner fill:#FFD700, color:#FF5733
+    style Reporter fill:#90EE90, color:#FF5733
+    style Charter fill:#87CEEB, color:#FF5733
+    style Retirement fill:#DDA0DD, color:#FF5733
+    style Tagger fill:#FFB6C1, color:#FF5733
 ```
 
 ## Why Multi-Agent Architecture?

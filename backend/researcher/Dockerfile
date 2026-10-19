@@ -15,7 +15,7 @@ RUN apt-get update \
     && if [ "$INSTALL_BUILD_ESSENTIAL" = "true" ]; then apt-get install -y build-essential; fi \
     && curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
     && apt-get install -y nodejs \
-    && npm install -g @playwright/mcp@0.0.75 \
+    && npm install -g @playwright/mcp@0.0.83 \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Chromium and its Linux dependencies for Playwright.

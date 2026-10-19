@@ -16,7 +16,7 @@ Your THREE steps (BE CONCISE):
 
 1. WEB RESEARCH (1-2 pages MAX):
    - Navigate to ONE main source (Yahoo Finance or MarketWatch)
-   - Use browser_snapshot to read content
+   - Use only browser_navigate and browser_snapshot to read content
    - If needed, visit ONE more page for verification
    - DO NOT browse extensively - 2 pages maximum
 

@@ -25,7 +25,9 @@ def setup_test_data():
         ["uv", "run", "reset_db.py", "--with-test-data", "--skip-drop"],
         cwd="../database",
         capture_output=True,
-        text=True
+        text=True,
+        encoding="utf-8",
+        errors="replace",
     )
     if result.returncode != 0:
         print(f"Warning: Could not ensure test data: {result.stderr}")

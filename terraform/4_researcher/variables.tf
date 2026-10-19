@@ -35,13 +35,13 @@ variable "researcher_image_uri" {
 variable "bedrock_region" {
   description = "AWS region used for Bedrock model inference"
   type        = string
-  default     = "us-west-2"
+  default     = "us-east-1"
 }
 
 variable "researcher_model" {
   description = "Bedrock model identifier used by the researcher"
   type        = string
-  default     = "bedrock/global.openai.gpt-oss-120b-1:0"
+  default     = "bedrock/converse/openai.gpt-oss-120b-1:0"
 }
 
 variable "mcp_logging" {

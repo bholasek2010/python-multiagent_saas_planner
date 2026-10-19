@@ -51,11 +51,11 @@ Here's how the database fits into our architecture:
 
 ```mermaid
 graph TB
-    User[User] -->|Manage Portfolio| API[API Gateway]
-    API -->|CRUD Operations| Lambda[API Lambda]
-    Lambda -->|Data API| Aurora[(Aurora Serverless v2<br/>PostgreSQL)]
+    User[User] -->|Manage Portfolio| API[<font color=#FF5733>API Gateway</font>]
+    API -->|CRUD Operations| Lambda[<API Lambda]
+    Lambda -->|Data API| Aurora[(<font color=#FF5733>Aurora Serverless v2<br/>PostgreSQL</font>)]
 
-    Planner[Financial Planner<br/>Orchestrator] -->|Read/Write| Aurora
+    Planner[<font color=#FF5733>Financial Planner<br/>Orchestrator</font>] -->|Read/Write| Aurora
     Tagger[InstrumentTagger] -->|Update Instruments| Aurora
     Reporter[Report Writer] -->|Store Reports| Aurora
     Charter[Chart Maker] -->|Store Charts| Aurora
